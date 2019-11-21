@@ -1,0 +1,188 @@
+.header {
+  min-height:600px;
+  padding:2rem;
+  color: $headerColor;
+  font-family: $fontGreat;
+  &-navigation{
+    border-bottom: 2px solid  rgba(32, 195, 166, 0.5);
+    position: relative;
+  }
+  &-navigation-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  &-navigation-list-mobile {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    -webkit-transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease;
+    &_link {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 1rem 0.5rem;
+      color: $headerColor;
+      text-decoration: none;
+      background-image: url(../images/stars-bg.png);
+      background-size: cover;
+      display: block;
+      background-color: $presentColor;
+      width: 100%;
+      -webkit-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+      -webkit-transition:color 0.3s ease;
+      transition: color 0.3s ease;
+      -webkit-transition: box-shadow, 0.3s ease;
+      transition: box-shadow, 0.3s ease;
+      &:hover {
+        background-color:  rgba(32, 195, 166, 0.5);
+        color: $headerColor;
+        text-decoration: none;
+        box-shadow: 0 0 10px  rgba(32, 195, 166, 0.5) ;
+      }
+    }
+  }
+  &-navigation_link{
+    color: $headerColor;
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(32, 195, 166, 0.5);
+    padding:1rem;
+    border-radius: 15px;
+    font-weight: 700;
+    -webkit-transition: background-color, 0.3s ease;
+    transition: background-color, 0.3s ease;
+    -webkit-transition: box-shadow, 0.3s ease;
+    transition: box-shadow, 0.3s ease;
+    box-shadow: 0 0 10px rgba(32, 195, 166, 0.5);
+    &:hover{
+      color:$headerColor;
+      text-decoration: none;
+      background-color: darken(rgba(32, 195, 166, 0.5), 10);
+      box-shadow: 0 0 
+      10px rgba(250, 100, 117, 0.5);
+    }
+    &:active {
+      color: $headerColor;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $headerColor;
+      text-decoration: none;
+    }
+  }
+  &-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding:10rem 0 10rem 0;
+    &-box{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding:6rem 2rem 6rem 6rem;
+      background-color: rgba(32, 195, 166, 0.3);
+      box-shadow: 0 0 50px  rgba(32, 195, 166, 0.3);
+      border-radius: 7px;
+    }
+  }
+  &-navigation-snow {
+     display: none;
+     &_image {
+       width: 60px;
+       height: 60px;
+     }
+  }
+  &-navigation-burg {
+    display: none;
+     width:50px;
+     height: 50px;
+     border-radius: 7px;
+     background-color:rgba(32, 195, 166, 0.3);
+     position: relative;
+     cursor: pointer;
+     -webkit-transition: background-color, 0.3s ease;
+    transition: background-color, 0.3s ease;
+    -webkit-transition: box-shadow, 0.3s ease;
+    transition: box-shadow, 0.3s ease;
+    box-shadow: 0 0 10px rgba(32, 195, 166, 0.5);
+     &:hover {
+      background-color: darken(rgba(32, 195, 166, 0.5), 10);
+      box-shadow: 0 0 10px rgba(250, 100, 117, 0.5);
+     }
+     .icon,
+     .icon::before,
+     .icon::after {
+       position: absolute;
+       display: inline-block;
+       width: 30px;
+       height: 2px;
+       background-color:$headerColor;
+       top:50%;
+       left: 50%;
+       margin-left: -15px;
+       margin-top: -1px;
+     }
+     .icon::before,
+     .icon::after {
+       content: '';
+       display: block;
+       -webkit-transition: transform 0.3s ease;
+       transition: transform 0.3s ease;
+     }
+     .icon::after {
+       transform: translateY(-5px);
+     }
+     .icon::before {
+      transform: translateY(5px);
+    }
+  }
+  &-navigation-burg__active {
+    .icon {
+      height: 0;
+    }
+    .icon::after {
+      transform: rotate(-45deg);
+    }
+    .icon::before {
+      transform: rotate(45deg);
+    }
+  }
+  &-heading {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &-year {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &-present {
+   color: $presentColor;
+   text-decoration: none;
+   font-size: 2.5rem;
+   font-weight:bold;
+   -webkit-transition: color 0.3s ease;
+   transition: color 0.3s ease;
+   -webkit-transition: text-shadow 0.3s ease;
+   transition: text-shadow 0.3s ease;
+   &:hover {
+     color: lighten($presentColor, 10);
+     text-shadow: 0 0 10px rgba(254, 84, 146, 0.7);
+     text-decoration: none;
+   }
+   &:visited {
+     color: $presentColor;
+     text-decoration: none;
+   }
+  }
+}

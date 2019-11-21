@@ -1,0 +1,91 @@
+@media screen and (max-width: 991px) {
+  .header {
+     &-heading {
+       font-size: 2rem;
+     }
+     &-year {
+       font-size: 1.8rem;
+     }
+     &-present {
+       font-size: 1.8rem;
+     }
+  }
+  .section {
+   &-game {
+    @media screen  and(max-width: 768px){
+      background-size: cover;
+   }
+   }
+   &-game-text {
+     font-size: 1.2rem;
+     @media screen  and(max-width: 768px){
+      text-align: center;
+   }
+   }
+   &-game-heading {
+     font-size: 1.5rem;
+     @media screen  and(max-width: 768px){
+        text-align: center;
+     }
+   }
+   &-game_preset-img {
+      width:100%;
+      height: 100%;
+      @media screen  and(max-width: 768px){
+        text-align: center;
+        transform: translate(-50% -50%);
+        margin: 0 auto;
+        height: 85%;
+        width: 85%;
+     }
+   }
+   &-timer-heading {
+     font-size: 3rem;
+     @media screen  and(max-width: 768px){
+      font-size:2.5rem;
+    }
+    @media screen  and(max-width: 430px){
+      font-size:2rem;
+    }
+   }
+   .timer-wrapp {
+      .timer {
+        font-size: 2rem;
+        @media screen  and(max-width: 768px){
+          font-size:1.5rem;
+        }
+      }
+      .data {
+         padding:1.5rem;
+         @media screen  and(max-width: 430px){
+          padding:1rem;
+        }
+        @media screen  and(max-width: 369px){
+          padding:0.5rem;
+        }
+      }
+   }
+  }
+}
+@media all and (max-width:768px) {
+  .header {
+    &-navigation-burg {
+      display: block;
+    }
+    &-navigation {
+      display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+    &-navigation-list {
+      display: none;
+    }
+    &-navigation-snow {
+      display: block;
+      flex-basis: 30%;
+    }
+    &-navigation-list-mobile {
+      display: block;
+    }
+  }
+}
